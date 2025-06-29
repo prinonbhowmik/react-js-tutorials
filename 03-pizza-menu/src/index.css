@@ -39,7 +39,7 @@ body {
 
 .header h1 {
   /* Non-accessible color */
-  color: #edc84b;
+  color: #b8e874;
   /* color: #af8602; */
 
   text-transform: uppercase;
@@ -83,12 +83,13 @@ body {
 .menu h2 {
   display: inline-block;
   padding: 1rem 0;
-  border-top: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
+  border-top: 2px solid #edc84b;
+  border-bottom: 2px solid #edc84b;
   font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 500;
+  font-weight: 300;
+  color: #b8e874;
 }
 
 .menu > p {
@@ -114,6 +115,7 @@ body {
   width: 12rem;
   aspect-ratio: 1;
   align-self: start;
+  border-radius: 8px;
 }
 
 .pizza div {
@@ -138,6 +140,7 @@ body {
 .pizza span {
   display: block;
   font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .pizza.sold-out {
@@ -147,6 +150,7 @@ body {
 .pizza.sold-out img {
   filter: grayscale();
   opacity: 0.8;
+  border-radius: 8px;
 }
 
 /* *************** */

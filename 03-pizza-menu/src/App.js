@@ -58,9 +58,7 @@ function App() {
 function Header() {
   return (
     <header className="header">
-      <h1 style={{ fontSize: 32, color: "yellowgreen", textAlign: "center" }}>
-        Pizza World.
-      </h1>
+      <h1>Pizza World.</h1>
     </header>
   );
 }
@@ -94,31 +92,6 @@ function Menu() {
   );
 }
 
-function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
-
-  // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
-  // else alert("Sorry we're closed");
-
-  // if (!isOpen) return <p>CLOSED</p>;
-
-  return (
-    <footer className="footer">
-      {isOpen ? (
-        <Order closeHour={closeHour} openHour={openHour} />
-      ) : (
-        <p>
-          We're happy to welcome you between {openHour}:00 and {closeHour}:00.
-        </p>
-      )}
-    </footer>
-  );
-}
-
 function Pizza({ pizzaObj }) {
   console.log(pizzaObj);
 
@@ -132,6 +105,26 @@ function Pizza({ pizzaObj }) {
         <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>
     </li>
+  );
+}
+
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen);
+
+  return (
+    <footer className="footer">
+      {isOpen ? (
+        <Order closeHour={closeHour} openHour={openHour} />
+      ) : (
+        <p>
+          We're happy to welcome you between {openHour}:00 and {closeHour}:00.
+        </p>
+      )}
+    </footer>
   );
 }
 
